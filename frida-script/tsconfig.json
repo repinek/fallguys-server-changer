@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [ "es2022" ],
+    "experimentalDecorators": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowJs": false,
+    "noEmit": false,
+    "esModuleInterop": false,
+    "strict": true,
+    "sourceMap": true
+  }
+}

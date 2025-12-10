@@ -1,0 +1,28 @@
+{
+  "name": "fallguys-server-changer",
+  "version": "1.0.0",
+  "description": "TODO",
+  "main": "src/index.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "frida-compile src/index.ts -o dist/agent.js",
+    "spawn:windows": "frida -n \"FallGuys_client_game.exe\" -l dist/agent.js",
+    "spawn:android_gadget": "frida -U gadget -l dist/agent.js"
+  },
+  "author": "repinek",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/frida-gum": "^19.0.1",
+    "@types/node": "^25.0.0",
+    "frida-compile": "^19.0.4"
+  },
+  "dependencies": {
+    "frida-il2cpp-bridge": "^0.12.1"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "arrowParens": "avoid",
+    "trailingComma": "none",
+    "printWidth": 160
+  }
+}

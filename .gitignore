@@ -1,0 +1,4 @@
+# Frida script
+/frida-script/node_modules/
+/frida-script/dist/
+/frida-script/.venv/
