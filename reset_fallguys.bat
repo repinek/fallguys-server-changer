@@ -1,0 +1,3 @@
+@echo off
+echo Deleting Fall Guys registry keys...
+reg delete "HKEY_CURRENT_USER\Software\Mediatonic\FallGuys_client" /f
