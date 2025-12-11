@@ -1,6 +1,7 @@
 // Based on code from Fall Guys Frida Mod Menu (Open Source): https://github.com/repinek/fallguys-frida-modmenu
 
 // TODO: hook telemetry (later)
+// TODO: Epic Games error
 
 // Tested on: 10.1.0, 10.2.0, 10.3.0, 10.4.0, 10.8.1, 21.0.0 - 21.1.1
 // Should work: 10.1.0 - latest / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as HTTP
@@ -49,7 +50,9 @@ function main(): void {
 
     const HttpNetworkHost = CatapultClientSDkImage.tryClass("Catapult.Network.Connections.Config.HttpNetworkHost");
     if (!HttpNetworkHost) {
-        throw new Error("FATAL! Catapult.Network.Connections.Config.HttpNetworkHost class not found!\nThe game version is unsupported, did you run right script?");
+        throw new Error(
+            "FATAL! Catapult.Network.Connections.Config.HttpNetworkHost class not found!\nThe game version is unsupported, did you run right script?"
+        );
     }
 
     const WebSocketNetworkHost = CatapultClientSDkImage.class("Catapult.Network.Connections.Config.WebSocketNetworkHost");
