@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TODO",
   "scripts": {
-    "build:mt_catapult": "frida-compile src/mt-catapult/index.ts -o dist/agent.js",
+    "build:mt_catapult": "frida-compile src/modern/index.ts -o dist/agent.js",
     "spawn:windows": "frida -n \"FallGuys_client_game.exe\" -l dist/agent.js",
     "spawn:windows_old": "frida -n \"FallGuys_client.exe\" -l dist/agent.js",
     "spawn:android_gadget": "frida -U gadget -l dist/agent.js"

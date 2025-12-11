@@ -2,11 +2,11 @@
 
 // TODO: hook telemetry (later)
 
-// Tested on builds: 10.4.0, 10.8.1, 21.0.0 - 21.1.1
-// Should work: Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime"
-// Not working on: Any build that uses "Catapult.ClientSdk"
+// Tested on: 10.3.0, 10.4.0, 10.8.1, 21.0.0 - 21.1.1
+// Should work: 10.3.0 - latest / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as HTTP (I'm not tested 10.1.0-10.2.1)
+// Not working on: Any build that uses "Catapult.ClientSdk" / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as WebSocket
 
-// In this script version (in "Mediatonic.Catapult.ClientSdk.Runtime")
+// In this script version:
 // Gateway and Analytics is WebSocket
 // Login is HTTP
 
@@ -47,7 +47,11 @@ function main(): void {
     const EOSManagerFG = AssemblyCSharp.class("EOSManagerFG");
     const CatapultServicesManager = MTFGClient.class("FGClient.CatapultServices.CatapultServicesManager");
 
-    const HttpNetworkHost = CatapultClientSDkImage.class("Catapult.Network.Connections.Config.HttpNetworkHost");
+    const HttpNetworkHost = CatapultClientSDkImage.tryClass("Catapult.Network.Connections.Config.HttpNetworkHost");
+    if (!HttpNetworkHost) {
+        throw new Error("FATAL! Catapult.Network.Connections.Config.HttpNetworkHost class not found!\nThe game version is unsupported, did you run right script?");
+    }
+
     const WebSocketNetworkHost = CatapultClientSDkImage.class("Catapult.Network.Connections.Config.WebSocketNetworkHost");
 
     const OnCheckToTriggerMissingFilesPopup = EOSManagerFG.tryMethod("OnCheckToTriggerMissingFilesPopup", 1);
