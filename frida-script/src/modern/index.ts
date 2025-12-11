@@ -2,9 +2,9 @@
 
 // TODO: hook telemetry (later)
 
-// Tested on: 10.3.0, 10.4.0, 10.8.1, 21.0.0 - 21.1.1
-// Should work: 10.3.0 - latest / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as HTTP (I'm not tested 10.1.0-10.2.1)
-// Not working on: Any build that uses "Catapult.ClientSdk" / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as WebSocket
+// Tested on: 10.1.0, 10.2.0, 10.3.0, 10.4.0, 10.8.1, 21.0.0 - 21.1.1
+// Should work: 10.1.0 - latest / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as HTTP
+// Not working on: <=10.0.0 / Any build that uses "Catapult.ClientSdk" / Any build that uses "Mediatonic.Catapult.ClientSdk.Runtime" with login as WebSocket
 
 // In this script version:
 // Gateway and Analytics is WebSocket
