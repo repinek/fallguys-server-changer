@@ -54,7 +54,6 @@ function main(): void {
             "FATAL! Catapult.Network.Connections.Config.HttpNetworkHost class not found!\nThe game version is unsupported, did you run right script?"
         );
     }
-
     const WebSocketNetworkHost = CatapultClientSDkImage.class("Catapult.Network.Connections.Config.WebSocketNetworkHost");
 
     const OnCheckToTriggerMissingFilesPopup = EOSManagerFG.tryMethod("OnCheckToTriggerMissingFilesPopup", 1);
