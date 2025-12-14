@@ -1,6 +1,6 @@
 # Fall Guys Server Changer
 
-This repository contains scripts to redirect Fall Guys network traffic to a custom server.
+This repository contains scripts to redirect Fall Guys network traffic to a private server.
 
 > [!WARNING]  
 > **THIS IS NOT PRIVATE SERVER!**
