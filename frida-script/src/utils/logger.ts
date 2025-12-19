@@ -1,4 +1,3 @@
-
 enum LogType {
     INFO = "INFO",
     INFO_GREEN = "INFO_GREEN",
@@ -26,23 +25,26 @@ export class Logger {
         const ms = date.getMilliseconds().toString().padStart(3, "0");
         return `${this.Colors.GRAY}[${hh}:${mm}:${ss}.${ms}]${this.Colors.RESET}`;
     }
-    
+
     private static log(type: LogType, ...messages: any[]): void {
-        const time = this.getTime()
+        const time = this.getTime();
         switch (type) {
-            case LogType.INFO: 
+            case LogType.INFO:
                 console.info(`${time} ${this.Colors.BLUE}[INFO]${this.Colors.RESET}`, ...messages);
+                break
             case LogType.INFO_GREEN:
                 console.info(`${time} ${this.Colors.GREEN}[INFO]`, ...messages, this.Colors.RESET);
-            case LogType.WARN: 
+                break
+            case LogType.WARN:
                 console.warn(`${time} ${this.Colors.YELLOW}[WARN]${this.Colors.RESET}`, ...messages);
-            case LogType.ERROR: 
+                break
+            case LogType.ERROR:
                 console.error(`${time} ${this.Colors.RED}[ERROR]${this.Colors.RESET}`, ...messages);
+                break
             case LogType.HOOK:
                 console.debug(`${this.getTime()} ${this.Colors.GRAY}[HOOK]`, ...messages, this.Colors.RESET);
-            default:
-                console.log(...messages);
-        }       
+                break
+       }
     }
 
     static info(...messages: any[]) {
