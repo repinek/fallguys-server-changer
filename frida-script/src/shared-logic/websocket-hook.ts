@@ -10,7 +10,7 @@ export function webSocketHook(this: Il2Cpp.Object, host: Il2Cpp.String, port: nu
         port = CONFIG.LOGIN_WS.CUSTOM_LOGIN_PORT
         isSecure = CONFIG.LOGIN_WS.IS_LOGIN_SECURE
 
-        Logger.infoGreen(`Spoofed Login server to: ${host}:${port}/ws`)
+        Logger.infoGreen(`Spoofed Login server to: ${host.content}:${port}/ws`)
     }
 
     // Gateway spoof
@@ -19,7 +19,7 @@ export function webSocketHook(this: Il2Cpp.Object, host: Il2Cpp.String, port: nu
         port = CONFIG.CUSTOM_GATEWAY_PORT
         isSecure = CONFIG.IS_GATEWAY_SECURE
 
-        Logger.infoGreen(`Spoofed Gateway server to: ${host}:${port}/ws`)
+        Logger.infoGreen(`Spoofed Gateway server to: ${host.content}:${port}/ws`)
     }
 
     // Analytics spoof
@@ -28,7 +28,7 @@ export function webSocketHook(this: Il2Cpp.Object, host: Il2Cpp.String, port: nu
         port = CONFIG.CUSTOM_ANALYTICS_PORT
         isSecure = CONFIG.IS_ANALYTICS_SECURE
 
-        Logger.infoGreen(`Spoofed Analytics server to: ${host}:${port}/ws`)
+        Logger.infoGreen(`Spoofed Analytics server to: ${host.content}:${port}/ws`)
     }
 
     this.method<void>(".ctor", 3).invoke(host, port, isSecure)
