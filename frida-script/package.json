@@ -1,27 +1,24 @@
 {
-  "name": "fallguys-server-changer",
-  "description": "A Frida script for Fall Guys network traffic redirector",
-  "author": "repinek",
-  "license": "MIT",
-  "scripts": {
-    "build:s3": "frida-compile src/legacy-s3/index.ts -o dist/agent.js",
-    "build:modern": "frida-compile src/modern/index.ts -o dist/agent.js",
-    "spawn:windows": "frida -n \"FallGuys_client_game.exe\" -l dist/agent.js",
-    "spawn:windows_old": "frida -n \"FallGuys_client.exe\" -l dist/agent.js",
-    "spawn:android_gadget": "frida -U gadget -l dist/agent.js"
-  },
-  "devDependencies": {
-    "@types/frida-gum": "^19.0.1",
-    "@types/node": "^25.0.0",
-    "frida-compile": "^19.0.4"
-  },
-  "dependencies": {
-    "frida-il2cpp-bridge": "^0.12.1"
-  },
-  "prettier": {
-    "tabWidth": 4,
-    "arrowParens": "avoid",
-    "trailingComma": "none",
-    "printWidth": 160
-  }
+    "name": "fallguys-server-changer",
+    "description": "A Frida script for Fall Guys network traffic redirector",
+    "author": "repinek",
+    "license": "MIT",
+    "scripts": {
+        "build:s3": "frida-compile src/legacy-s3/index.ts -o dist/agent.js",
+        "build:modern": "frida-compile src/modern/index.ts -o dist/agent.js",
+        "spawn:windows": "frida -n \"FallGuys_client_game.exe\" -l dist/agent.js",
+        "spawn:windows_old": "frida -n \"FallGuys_client.exe\" -l dist/agent.js",
+        "spawn:android_gadget": "frida -U gadget -l dist/agent.js",
+        "format": "biome format --write \"src/",
+        "lint": "biome lint \"src/"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.3.10",
+        "@types/frida-gum": "^19.0.1",
+        "@types/node": "^25.0.0",
+        "frida-compile": "^19.0.4"
+    },
+    "dependencies": {
+        "frida-il2cpp-bridge": "^0.12.1"
+    }
 }
