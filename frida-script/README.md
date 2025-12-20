@@ -27,7 +27,7 @@ npm install
 
 ## Configuration
 Before running the script, you must configure your server IPs and ports.  
-Open the entry file for the version you want to target and modify the `Config` object at the top.   
+Open `/src/data/config.ts` and modify `CONFIG`.
 
 The game construct for websocket: `{scheme}://{URL}:{PORT}/ws`.  
 `{scheme}` is ws or wss, depends secure is websocket or no.
@@ -38,7 +38,7 @@ The game construct for websocket: `{scheme}://{URL}:{PORT}/ws`.
 * Patching `OnCheckToTriggerMissingFilesPopup` to prevent "Missing Files" error (only for `modern` script)
 
 
-## Available Scripts
+## Available Scripts / Compiling
 **Build the script:**   
 Compile the agent into `./dist/agent.js`.  
 `npm run build:s3` - Builds a legacy-s3 script.  
