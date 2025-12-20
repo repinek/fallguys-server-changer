@@ -2,4 +2,4 @@
 /frida-script/node_modules/
 /frida-script/dist/
 /frida-script/.venv/
-/frida-script/src/legacy/
+/frida-script/dont_ship/
