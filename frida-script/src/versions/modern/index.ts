@@ -12,9 +12,9 @@
 // Login is HTTP
 
 import "frida-il2cpp-bridge"
-import { CONFIG } from "../data/config"
-import { webSocketHook } from "../shared-logic/websocket-hook"
-import { Logger } from "../utils/logger"
+import { CONFIG } from "../../data/config"
+import { webSocketHook } from "../../shared-logic/websocket-hook"
+import { Logger } from "../../utils/logger"
 
 function main(): void {
     // === Assemblies ===

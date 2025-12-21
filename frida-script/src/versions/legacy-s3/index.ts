@@ -10,7 +10,7 @@
 // Gateway, Analytics and Login is WebSocket
 
 import "frida-il2cpp-bridge"
-import { webSocketHook } from "../shared-logic/websocket-hook"
+import { webSocketHook } from "../../shared-logic/websocket-hook"
 
 function main(): void {
     console.log(

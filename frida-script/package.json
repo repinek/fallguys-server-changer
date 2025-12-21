@@ -4,8 +4,8 @@
     "author": "repinek",
     "license": "MIT",
     "scripts": {
-        "build:s3": "frida-compile src/legacy-s3/index.ts -o dist/agent.js",
-        "build:modern": "frida-compile src/modern/index.ts -o dist/agent.js",
+        "build:s3": "frida-compile src/versions/legacy-s3/index.ts -o dist/agent.js",
+        "build:modern": "frida-compile src/versions/modern/index.ts -o dist/agent.js",
         "spawn:windows": "frida -n \"FallGuys_client_game.exe\" -l dist/agent.js",
         "spawn:windows_old": "frida -n \"FallGuys_client.exe\" -l dist/agent.js",
         "spawn:android_gadget": "frida -U gadget -l dist/agent.js",
