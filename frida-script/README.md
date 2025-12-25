@@ -35,13 +35,14 @@ The game construct for websocket: `{scheme}://{URL}:{PORT}/ws`.
 
 ## Features
 * URIs spoofing
-* Patching `OnCheckToTriggerMissingFilesPopup` to prevent "Missing Files" error (only for `modern` script)
+* Patching "Missing Files" error (only for `ss3` and `modern` script)
 
 
 ## Available Scripts / Compiling
 **Build the script:**   
 Compile the agent into `./dist/agent.js`.  
 `npm run build:s3` - Builds a legacy-s3 script.  
+`npm run build:ss3` - Builds a ss3 script.  
 `npm run build:modern` - Builds a modern script.  
 
 **Spawn the script:**  

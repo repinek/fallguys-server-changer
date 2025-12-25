@@ -17,8 +17,9 @@ A [Frida](https://frida.re/) script powered by [frida-il2cpp-bridge](https://git
 | --- | --- | --- |
 | Alpha - 0.9.10 | ❌ | Might work with `legacy-s3` |
 | 0.9.10 (tested on ls3.5) | ✅ | Use `legacy-s3` |
-| 0.9.10 - 9.0.4 | ⚠️ | Untested, likely works with `legacy-s3` | 
-| 10.0.0 | ❌ | Login as websocket | 
+| 0.9.10 - 8.2.0 | ⚠️ | Untested, likely works with `legacy-s3` or `ss3` | 
+| 9.0.0 - 9.0.4 | ✅ | Use `ss3` | 
+| 10.0.0 | ⚠️ | Login as websocket, likely works with `ss3` | 
 | 10.1.0 - 21.1.1 | ✅ | Use `modern` |
 
 Check [Building and Installation](./frida-script/README.md)
