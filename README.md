@@ -3,7 +3,7 @@
 This repository contains scripts to redirect Fall Guys network traffic to a private server.
 
 > [!WARNING]  
-> **THIS IS NOT PRIVATE SERVER OR READY-TO-GO SOLUTION. You need to configure it yourself. **
+> **THIS IS NOT PRIVATE SERVER OR READY-TO-GO SOLUTION. You need to configure it yourself.**
 
 
 ## Available Methods
